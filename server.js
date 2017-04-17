@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 app = express();
 
 //middleware lets oyu configure how your express applicaiton works 
@@ -57,6 +58,6 @@ app
 
 
 
-	.listen(3000, () => {
-		console.log('Server is up on port 3000')
+	.listen(port, () => {
+		console.log(`Server is up on port ${port}`)
 	});
