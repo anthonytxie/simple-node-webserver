@@ -31,6 +31,13 @@ app
 		})
 		next();
 	})
+	.get('/projects', (req,res)=> {
+		res.render('projects', {
+			title: "Projects will be here",
+			message: "These are projects that I am working on",
+			projects: ['project1', 'project2', 'project3','project4'],
+		})
+	})
 	// .use((req,res,next)=> {
 	// 	res.render('maintenance')
 	// })
